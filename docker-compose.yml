@@ -1,0 +1,13 @@
+
+
+services:
+  reader:
+    volumes:
+      - ./storeage:/storeage
+    build: ./reader
+    depends_on:
+      - writer
+  writer:
+    volumes:
+      - ./storeage:/storeage
+    build: ./writer
